@@ -1,7 +1,7 @@
 {
   "name": "web-last-block",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Требования к проекту",
   "keywords": [
     "web",
     "scss",
@@ -53,5 +53,12 @@
     "plugins": {
       "autoprefixer": {}
     }
-  }
+  },
+  "repository": {
+    "url": "https://github.com/Mentavr/Kata-final-block.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mentavr/Kata-final-block/issues"
+  },
+  "homepage": "https://github.com/Mentavr/Kata-final-block#readme"
 }

@@ -2,15 +2,462 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/styles/normalize.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header-buttons__wrapper header-buttons__wrapper_right">
+          <button class="header-button" id="burger-open-button">
+            <img
+              class="header__image"
+              src="./src/icons/menu-icon.svg"
+              alt="icon menu"
+            />
+          </button>
+          <div class="header_decor-line tablet"></div>
+          <button class="header-button__logo">
+            <img class="header__logo" src="./src/images/logo.png" alt="" />
+          </button>
+        </div>
+        <div class="header-buttons__wrapper header-buttons__wrapper_left">
+          <button class="header-button tablet">
+            <img
+              class="header__image"
+              src="./src/icons/phone-icon.svg"
+              alt=""
+            />
+          </button>
+          <button class="header-button tablet">
+            <img
+              class="header__image"
+              src="./src/icons/message-icon.svg"
+              alt=""
+            />
+          </button>
+          <button class="header-button tablet">
+            <img class="header__image" src="./src/icons/user-icon.svg" alt="" />
+          </button>
+          <div class="header_decor-line"></div>
+          <div class="header-buttons__wrapper">
+            <div class="header-button__wrapper">
+              <span class="header-button__description desktop"
+                >Оставить заявку</span
+              >
+              <button class="header-button">
+                <img
+                  class="header__image"
+                  src="./src/icons/option-icon.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="header-button__wrapper">
+              <span class="header-button__description desktop"
+                >Статус ремонта</span
+              >
+              <button class="header-button">
+                <img
+                  class="header__image"
+                  src="./src/icons/status-icon.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sidebar burger menu -->
+
+      <aside class="burger-menu">
+        <section class="menu-container" id="burger-menu">
+          <div class="burger-menu__header">
+            <div class="header-buttons__wrapper header-buttons__wrapper_right">
+              <button class="header-button" id="burger-close-button">
+                <img
+                  class="header__image"
+                  src="./src/icons/close-icon.svg"
+                  alt="icon menu"
+                />
+              </button>
+              <button class="header-button__logo">
+                <img
+                  class="header__logo"
+                  src="./src/images/logo.png"
+                  alt="logo company"
+                />
+              </button>
+            </div>
+            <div class="header-buttons__wrapper header-buttons__wrapper_left">
+              <button class="header-button">
+                <img
+                  class="header__image"
+                  src="./src/icons/search-icon.svg"
+                  alt="search icon"
+                />
+              </button>
+            </div>
+          </div>
+          <nav class="burger-nav">
+            <ul class="burger-nav__items">
+              <li class="burger-nav__item burger-nav__item_active">
+                <button class="burger-nav__item-button">Ремонт техники</button>
+              </li>
+              <li class="burger-nav__item">
+                <button class="burger-nav__item-button">
+                  Услуги и сервисы
+                </button>
+              </li>
+              <li class="burger-nav__item">
+                <button class="burger-nav__item-button">
+                  Корпоративным клиент
+                </button>
+              </li>
+              <li class="burger-nav__item">
+                <button class="burger-nav__item-button">
+                  Продавцам техники
+                </button>
+              </li>
+              <li class="burger-nav__item">
+                <button class="burger-nav__item-button">Партнерам</button>
+              </li>
+              <li class="burger-nav__item">
+                <button class="burger-nav__item-button">Производителям</button>
+              </li>
+              <li class="burger-nav__item">
+                <button class="burger-nav__item-button">
+                  Наши сервисные центр
+                </button>
+              </li>
+              <li class="burger-nav__item">
+                <button class="burger-nav__item-button">Контакты</button>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger-menu__footer">
+            <div class="burger-menu__footer-buttons">
+              <button class="burger-menu__footer-button">
+                <img
+                  src="./src/icons/phone-icon.svg"
+                  alt=""
+                  class="burger-menu__footer-button-icon"
+                />
+              </button>
+              <button class="burger-menu__footer-button">
+                <img
+                  src="./src/icons/message-icon.svg"
+                  alt=""
+                  class="burger-menu__footer-button-icon"
+                />
+              </button>
+              <button class="burger-menu__footer-button">
+                <img
+                  src="./src/icons/user-icon.svg"
+                  alt=""
+                  class="burger-menu__footer-button-icon"
+                />
+              </button>
+            </div>
+            <p class="burger-menu__footer-email">mail@cps.com</p>
+            <p class="burger-menu__footer-phone">8 800 890 8900</p>
+            <ul class="burger-menu__footer-lang-items">
+              <li
+                class="burger-menu__footer-lang-item burger-menu__footer-lang-item_active"
+              >
+                <button class="burger-menu__footer-lang-button"> RU </button>
+              </li>
+              <li class="burger-menu__footer-lang-item">
+                <button class="burger-menu__footer-lang-button">EN</button>
+              </li>
+              <li class="burger-menu__footer-lang-item">
+                <button class="burger-menu__footer-lang-button">CH</button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </header>
+    <main class="main">
+      <section class="container">
+        <div class="title__wrapper">
+          <h1 class="title">Услуги и сервисы</h1>
+        </div>
+        <div class="main__filter-items">
+          <ul class="main__items">
+            <li class="main__item">
+              <button type="button" class="main__item-button">
+                Ремонтируемые устрой
+              </button>
+            </li>
+            <li class="main__item">
+              <button type="button" class="main__item-button">
+                Дополнительные услуги
+              </button>
+            </li>
+            <li class="main__item">
+              <button type="button" class="main__item-button">
+                Цены на услуги
+              </button>
+            </li>
+            <li class="main__item">
+              <button type="button" class="main__item-button">
+                Адреса сервисных центров
+              </button>
+            </li>
+            <li class="main__item">
+              <button type="button" class="main__item-button">
+                Специальные цены
+              </button>
+            </li>
+          </ul>
+        </div>
+        <p class="feedback desktop">Отзывы</p>
+        <div class="description">
+          <div class="description__wrapper">
+            <p class="description__service">
+              Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.
+              <br />
+              <br />
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.
+            </p>
+            <button type="button" class="description__button">
+              <img
+                class="description__button-icon"
+                src="./src/icons/arrows-icon.svg"
+                alt=""
+              />
+              <p class="description__button-text">Читать далее</p>
+            </button>
+          </div>
+          <div class="description__image-wrapper">
+            <img
+              class="description__image"
+              src="./src/images/img-company.jpg"
+              alt="company image office"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="swiper__content">
+        <div class="title__container">
+          <div class="container">
+            <div class="title__wrapper">
+              <h2 class="title">Ремонт техники различных брендов</h2>
+            </div>
+          </div>
+        </div>
+        <div class="castom-swiper__container swiper-filter container">
+          <div class="swiper castom-swiper">
+            <div class="swiper-wrapper castom-swiper__wrapper">
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/lenova.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/samsung.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/apple.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/sonic.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/bosch.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/hp.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/acer.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/sony.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/lenova.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/samsung.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide castom-swiper__slide">
+                <div class="castom-swiper__slide-content">
+                  <div class="castom-swiper__slide-img-wrapper">
+                    <img
+                      src="./images/apple.png"
+                      alt="image company"
+                      class="castom-swiper__slide-img"
+                    />
+                  </div>
+                  <button class="castom-swiper__slide-button">
+                    <img
+                      src="./images/icons/horizontal-arrow.svg"
+                      alt="button arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="open-button close" id="button">
+              <img
+                class="button__icon"
+                src="./images/icons/arrows-icon.svg"
+                alt="button icon"
+              />
+              <p class="button__text">Показать все</p>
+            </button>
+          </div>
+          <div class="swiper-pagination castom-swiper__pagination"></div>
+        </div>
+      </section>
+    </main>
   </body>
+  <script type="module" src="index.js"></script>
 </html>

@@ -1,17 +1,11 @@
-$bgColor: #24292e;
-$text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import url('../fonts/font.scss');
+@import url('../styles/normalize.css');
+@import url('../styles/variables.scss');
 
 body {
   padding: 1rem;
   margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  font-family: $main-font, sans-serif;
+  background-color: $background-main-color;
+  color: $text-color-black;
 }
