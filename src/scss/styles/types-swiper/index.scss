@@ -168,6 +168,11 @@
 }
 
 @media (min-width: 1336px) {
+
+  .types-repairs__container.container {
+    padding-top: 0;
+  }
+  
   .types-repairs__title-container {
     background: linear-gradient(
       90deg,

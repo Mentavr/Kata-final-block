@@ -97,6 +97,8 @@ module.exports = {
         from: './src/img/icons',
         to: 'svg',
       },
-    ])
+      { from: './src/404.html', to: '404.html' }
+    ]),
+
   ],
 };
