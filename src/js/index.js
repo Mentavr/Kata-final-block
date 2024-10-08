@@ -1,3 +1,6 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
+import app from './app/app.js'
 
-console.log('Works!')
+console.log('точка входа  js')
+
+app()

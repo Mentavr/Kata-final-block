@@ -11,7 +11,9 @@ module.exports = {
 
   // Выходной файл
   output: {
-    filename: './js/bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/bundle.js',
+    publicPath: '/',
   },
 
   // Source maps для удобства отладки
@@ -34,7 +36,7 @@ module.exports = {
 
       // Компилируем SCSS в CSS
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
@@ -48,9 +50,13 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/,
         use: [
           {
-            loader: 'file-loader?name=./fonts/[name].[ext]'
+            loader: 'file-loader',
+            options: {
+              name: './fonts/[name].[ext]', // путь для файлов шрифтов
+              outputPath: 'fonts', // куда складывать файлы шрифтов
+            },
           },
-        ]
+        ],
       },
 
       // Подключаем картинки из css
@@ -86,6 +92,10 @@ module.exports = {
       {
         from: './src/img',
         to: 'img',
+      },
+      {
+        from: './src/img/icons',
+        to: 'svg',
       },
     ])
   ],

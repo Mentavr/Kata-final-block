@@ -60,5 +60,8 @@
   "bugs": {
     "url": "https://github.com/Mentavr/Kata-final-block/issues"
   },
-  "homepage": "https://github.com/Mentavr/Kata-final-block#readme"
+  "homepage": "https://github.com/Mentavr/Kata-final-block#readme",
+  "dependencies": {
+    "swiper": "^11.1.14"
+  }
 }
