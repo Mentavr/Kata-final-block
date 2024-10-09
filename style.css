@@ -340,7 +340,8 @@ template {
   --border-radius-sm: 2px; }
 
 .header {
-  background-color: var(--background-white-color); }
+  background-color: var(--background-white-color);
+  width: 100%; }
   .header__container {
     display: flex;
     justify-content: space-between;
