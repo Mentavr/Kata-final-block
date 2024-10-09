@@ -1,11 +1,11 @@
 @import '../fonts/font.scss';
-@import './styles/normalize.scss';
-@import './styles/variables.scss';
+@import './styles/global/normalize.scss';
+@import './styles/global/variables.scss';
 @import './styles/header/index.scss';
 @import './styles/service/index.scss';
-@import './styles/burger-menu/';
+@import './styles/burger-menu/index.scss';
 @import './styles/brands-swiper/index.scss';
-@import './styles/footer/';
+@import './styles/footer/index.scss';
 @import './styles/types-swiper/index.scss';
 @import './styles/phone-menu/index.scss';
 @import './styles/feedback-menu/index.scss';
