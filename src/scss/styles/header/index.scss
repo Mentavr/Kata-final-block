@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   &__buttons-wrapper_left {
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   &__button {
@@ -67,7 +67,9 @@
     & {
       position: absolute;
       top: -150px;
-      width: 77%;
+      width: 100%;
+      max-width: 1120px;
+      z-index: 100;
     }
 
     &__container.container {
@@ -77,6 +79,7 @@
     &__buttons-wrapper_absolute {
       position: absolute;
       top: 190px;
+      right: 3%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -98,5 +101,4 @@
   .header .container {
     padding: 16px 16px !important;
   }
-
 }

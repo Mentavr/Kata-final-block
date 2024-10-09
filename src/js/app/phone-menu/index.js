@@ -10,7 +10,6 @@ export const phone = () => {
 
   Array.from(phoneMenuOpenButton).map((button) => {
     button.addEventListener('click', () => {
-      console.log('click phone');
       phoneMenu.classList.remove('phone-menu__container_close');
       phoneMenu.classList.add('phone-menu__container_open');
 

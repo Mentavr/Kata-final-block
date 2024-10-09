@@ -12,8 +12,8 @@ module.exports = {
   // Выходной файл
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js',
-    publicPath: '/',
+    filename: './js/bundle.js',
+    publicPath: ''
   },
 
   // Source maps для удобства отладки
@@ -59,6 +59,32 @@ module.exports = {
         ],
       },
 
+      {
+        test: /\.(svg|png|jpg|jpeg|webp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './img/[name].[ext]',
+              outputPath: 'img', // папка, куда файлы будут копироваться
+            },
+          },
+        ],
+      },
+
+      {
+        test: /\.(svg|png|jpg|jpeg|webp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './img/icons/[name].[ext]',
+              outputPath: './img/icons', // папка, куда файлы будут копироваться
+            },
+          },
+        ],
+      },
+
       // Подключаем картинки из css
       {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
@@ -79,7 +105,8 @@ module.exports = {
       minify: {
         removeComments: true,
         collapseWhitespace: false,
-      }
+      },
+      scriptLoading: 'defer',
     }),
 
     // Кладем стили в отдельный файлик
@@ -88,15 +115,11 @@ module.exports = {
     }),
 
     // Копируем картинки
-    new CopyWebpackPlugin([
-      {
-        from: './src/img',
-        to: 'img',
-      },
-      {
-        from: './src/img/icons',
-        to: 'svg',
-      },
-    ])
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './src/img', to: 'img' },
+        { from: './src/img/icons', to: 'img/icons' },
+      ]
+    })
   ],
 };
