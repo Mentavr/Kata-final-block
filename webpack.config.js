@@ -12,8 +12,8 @@ module.exports = {
   // Выходной файл
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js',
-    publicPath: '/',
+    filename: './js/bundle.js',
+    publicPath: '/Kata-final-block/'
   },
 
   // Source maps для удобства отладки
@@ -79,7 +79,8 @@ module.exports = {
       minify: {
         removeComments: true,
         collapseWhitespace: false,
-      }
+      },
+      scriptLoading: 'defer',
     }),
 
     // Кладем стили в отдельный файлик
@@ -91,7 +92,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: './src/img', to: 'img' },
-        { from: './src/img/icons', to: 'svg' },
+        { from: './src/img/icons', to: 'img/icons' },
         { from: './src/404.html', to: '404.html' }
       ]
     })
