@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: './js/bundle.js',
-    publicPath: '/Kata-final-block/'
+    publicPath: ''
   },
 
   // Source maps для удобства отладки
@@ -56,18 +56,30 @@ module.exports = {
               outputPath: 'fonts', // куда складывать файлы шрифтов
             },
           },
+        ],
+      },
+
+      {
+        test: /\.(svg|png|jpg|jpeg|webp)$/,
+        use: [
           {
             loader: 'file-loader',
             options: {
-              name: './img/[name].[ext]', // убедитесь, что путь к файлам правильный
+              name: './img/[name].[ext]',
               outputPath: 'img', // папка, куда файлы будут копироваться
             },
           },
+        ],
+      },
+
+      {
+        test: /\.(svg|png|jpg|jpeg|webp)$/,
+        use: [
           {
             loader: 'file-loader',
             options: {
-              name: './img/icons/[name].[ext]', // убедитесь, что путь к файлам правильный
-              outputPath: 'img/icons', // папка, куда файлы будут копироваться
+              name: './img/icons/[name].[ext]',
+              outputPath: './img/icons', // папка, куда файлы будут копироваться
             },
           },
         ],
