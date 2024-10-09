@@ -1,0 +1,77 @@
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center_start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+@mixin flex-center_end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-center_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@mixin flex-column-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@mixin form-button {
+  border-radius: var(--border-radius-mdl);
+  background-color: var(--pink-color);
+  padding: 4px 18px;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin form-button-text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--background-white-color);
+  align-items: center;
+}
+
+@mixin round-button {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--pink-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-lg);
+}
+
+@mixin decor-line {
+  content: '';
+  height: 40px;
+  width: 4px;
+  transform: translateY(-25%);
+  background-color: var(--background-active-color);
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+

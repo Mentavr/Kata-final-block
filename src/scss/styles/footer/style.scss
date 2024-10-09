@@ -1,3 +1,5 @@
+@import '../../mixins/mixins.scss';
+
 .footer__text {
   font-weight: 500;
   font-size: 14px;
@@ -20,9 +22,7 @@
 }
 
 .footer__content-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
   gap: 16px;
 }
 
@@ -45,9 +45,6 @@
   .footer__content-item:last-child {
     max-width: 20.625rem;
     text-align: end;
-  }
-
-  .footer__text {
   }
 }
 

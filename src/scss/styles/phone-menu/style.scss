@@ -1,3 +1,5 @@
+@import '../../mixins/mixins.scss';
+
 .phone-menu {
   position:   fixed;
   top: 0;
@@ -20,12 +22,7 @@
 }
 
 .phone-menu__button-close-modal {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  left: 0;
-  z-index: 200;
-  background-color: var(--pink-color);
+  @include round-button;
 }
 
 .phone-menu__title {
@@ -34,6 +31,13 @@
   line-height: 133%;
   letter-spacing: -0.03em;
   color: #1b1c21;
+}
+
+.phone-menu__title::before {
+  @include decor-line;
+  position: absolute;
+  left: 0;
+  top: 94px;
 }
 
 .phone-menu__form {
@@ -75,19 +79,9 @@
 }
 
 .phone-menu__button {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 200%;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  text-align: right;
-  color: var(--background-white-color);
-  border-radius: var(--border-radius-mdl);
-  background-color: var(--pink-color);
-  padding: 4px 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include form-button;
+  @include form-button-text;
+  @include flex-center;
 }
 
 .phone-menu__container_open {
@@ -124,8 +118,24 @@
 }
 
 @media (min-width: 1366px) {
+
+  .phone-menu__title::before {
+    top: 94px;
+  }
+
+  .phone-menu__title::before {
+    top: 29px;
+  }
+
   .phone-menu__container_open {
     width: 440px;
+  }
+
+  .phone-menu__button-close-modal {
+    position: absolute;
+    position: absolute;
+    left: -70px;
+    top: 19px;
   }
 }
 

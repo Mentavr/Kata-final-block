@@ -12,7 +12,7 @@ export const enableOnlyMobileSwiper = (selectorName, swiper) => {
     swiper.update();
 
     if (window.innerWidth > 768) {
-      console.log('тут')
+
       selectorName && button.classList.remove('hidden');
 
       swiper.disable();
@@ -23,7 +23,6 @@ export const enableOnlyMobileSwiper = (selectorName, swiper) => {
       burgerMenu.classList.remove('burger-menu__container_close');
     }
 
-    console.log('window.innerWidth', window.innerWidth)
     if (window.innerWidth > 1366) {
       body.classList.add("bodyContainer");
     }

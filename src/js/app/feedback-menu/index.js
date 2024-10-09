@@ -10,7 +10,7 @@ export const feedback = () => {
 
   Array.from(feedbackMenuOpenButton).map((button) => {
     button.addEventListener('click', () => {
-      console.log('click feedback');
+
       feedbackMenu.classList.remove('feedback-menu__container_close');
       feedbackMenu.classList.add('feedback-menu__container_open');
 
@@ -20,11 +20,24 @@ export const feedback = () => {
       burgerBackgroundMenu.classList.remove('background-menu_open');
 
       document.body.style.overflow = 'hidden';
-      document.body.style.position = 'static';
+      document.body.style.position = 'relative';
       document.body.style.top = '';
 
     });
   })
+
+
+  window.addEventListener('click', function (e) {
+    if (!feedbackMenu.contains(e.target) && feedbackBackgroundMenu.contains(e.target)) {
+      feedbackMenu.classList.remove('feedback-menu__container_open');
+      feedbackMenu.classList.add('feedback-menu__container_close');
+
+      feedbackBackgroundMenu.classList.remove('feedback-menu__background-menu_open');
+      feedbackBackgroundMenu.classList.add('feedback-menu__background-menu_close');
+
+      document.body.style.overflow = "auto";
+    }
+  });
 
   feedbackMenuCloseButton.addEventListener('click', () => {
     feedbackMenu.classList.remove('feedback-menu__container_open');

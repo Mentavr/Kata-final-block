@@ -1,44 +1,30 @@
+@import '../../mixins/mixins.scss';
+
 .header {
   background-color: var(--background-white-color);
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-center_between
   }
 
   &__buttons-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 1rem;
   }
 
   &__buttons-wrapper_right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center_end;
     gap: 1rem;
-    justify-content: flex-end;
   }
 
   &__buttons-wrapper_left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center_start;
     gap: 1rem;
     justify-content: flex-start;
   }
 
   &__button {
-    width: 2.5rem;
-    height: 2.5rem;
-    min-width: 2.5rem;
-    min-height: 2.5rem;
-    background-color: var(--pink-color);
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--border-radius-lg);
+    @include round-button;
   }
 
   &__button-logo {
@@ -62,27 +48,33 @@
   }
 }
 
+@media (min-width: 767px) {
+  .header__container {
+    max-width: 767px;
+    margin: 0 auto;
+  }
+}
+
+
 @media (min-width: 1336px) {
   .header {
+    .container {
+      padding: 16px;
+    }
     & {
       position: absolute;
       top: -150px;
       width: 100%;
       max-width: 1120px;
       z-index: 100;
-    }
-
-    &__container.container {
-      padding: 16px 16px !important;
+      right: 0;
     }
 
     &__buttons-wrapper_absolute {
       position: absolute;
       top: 190px;
       right: 3%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       gap: 2rem;
       z-index: 99;
     }
@@ -97,8 +89,13 @@
       font-weight: 500;
       font-size: 1rem;
     }
+
+    &__container {
+      max-width: 1120px;
+      margin: 0;
+    }
   }
-  .header .container {
-    padding: 16px 16px !important;
-  }
+
+  
+
 }

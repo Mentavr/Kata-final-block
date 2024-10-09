@@ -1,6 +1,6 @@
-import { initBrandsSwiper } from "../../app/brands-swiper";
-import { initPriceSwiper } from "../../app/price-swiper";
-import { initTypesSwiper } from "../../app/types-swiper";
+import { initBrandsSwiper } from "../../app/brands-repairs";
+import { initPriceSwiper } from "../../app/price-repairs";
+import { initTypesSwiper } from "../../app/types-repairs";
 import { enableOnlyMobileSwiper } from "../helpers";
 
 export const initSwipers = () => {

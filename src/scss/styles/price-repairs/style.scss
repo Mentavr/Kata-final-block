@@ -1,3 +1,5 @@
+@import '../../mixins/mixins.scss';
+
 .price-repairs__container.container {
   padding-bottom: 16px;
 }
@@ -12,17 +14,13 @@
     var(--background-main-color) 0%,
     var(--background-white-color) 100%
   );
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-center_start;
   min-height: 80px;
 }
 
 .price-repairs__title-wrapper {
-  display: flex;
   width: 100%;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-center_start;
 }
 
 .price-repairs__title {
@@ -55,10 +53,7 @@
   max-width: 260px;
   box-sizing: border-box;
   background-color: var(--background-white-color);
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  @include flex-center_start;
 }
 
 .price-repairs__castom-swiper-slide-content {
@@ -93,10 +88,8 @@
 }
 
 .price-repairs__castom-swiper-slide-wrapper {
-  align-items: center;
-  display: flex;
   width: 100%;
-  justify-content: flex-end;
+  @include flex-center_end;
 }
 
 .price-repairs__castom-swiper-slide_left {
@@ -104,9 +97,7 @@
 }
 
 .price-repairs__castom-swiper-slide-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   border: 2px solid var(--pink-color);
   border-radius: var(--border-radius-lg);
   background-color: var(--background-main-color);
@@ -116,9 +107,7 @@
 }
 
 .price-swiper-pagination.price-repairs__castom-swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 }
 
 .price-swiper-pagination .swiper-pagination-bullet {
@@ -136,25 +125,14 @@
 }
 
 .price-menu__button {
-  border-radius: var(--border-radius-mdl);
-  background-color: var(--pink-color);
-  padding: 4px 18px;
-  display: flex;
-  justify-content: center;
+  @include form-button;
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
 .price-menu__button-text {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 200%;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  text-align: right;
-  color: var(--background-white-color);
-  align-items: center;
+  @include form-button-text;
 }
 
 .price-repairs__title-items {

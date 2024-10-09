@@ -21,7 +21,6 @@
   top: 0;
 }
 
-
 .burger-menu__container {
   position: absolute;
   transform: translate(-120%);
@@ -59,9 +58,7 @@
 }
 
 .burger-menu__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-center_between;
   margin-bottom: 20px;
 }
 
@@ -93,17 +90,15 @@
   left: -1.5rem;
   height: 2rem;
   width: 0.25rem;
-  transform: translateY(-25%);
-  background-color: var(--background-active-color);
-  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  @include decor-line;
 }
 
-.burger-menu__nav-item-button {
+.burger-menu__nav-item-link {
   background-color: var(--background-white-color);
 }
 
 .burger-menu__nav-item:active {
-  .burger-menu__nav-item-button {
+  .burger-menu__nav-item-link {
     color: rgba(27, 28, 33, 0.8);
   }
 }
@@ -116,17 +111,12 @@
 }
 
 .burger-menu__footer-buttons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-center_start;
   gap: 1rem;
 }
 
 .burger-menu__footer-button {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: var(--pink-color);
-  border-radius: var(--border-radius-lg);
+  @include round-button;
 }
 
 .burger-menu__footer-email {
@@ -140,9 +130,7 @@
 }
 
 .burger-menu__footer-lang-items {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-center_start;
   gap: 0.4375rem;
   margin-top: 1rem;
 }
@@ -157,7 +145,7 @@
   opacity: 0.8;
 }
 
-.burger-menu__nav-item:active .burger-menu__nav-item-button {
+.burger-menu__nav-item:active .burger-menu__nav-item-link {
   color: rgba(27, 28, 33, 0.8);
 }
 
@@ -165,6 +153,44 @@
   .burger-menu__footer-lang-button {
     color: rgba(27, 28, 33, 0.8);
   }
+}
+
+.burger-menu__footer-lang-item_active {
+  .burger-menu__footer-lang-button {
+    color: var(--text-color-gray);
+  }
+}
+
+.burger-menu__footer-button:active {
+  opacity: 0.8;
+}
+
+.burger-nav__item:active {
+  .burger-nav__item-button {
+    color: rgba(27, 28, 33, 0.8);
+  }
+}
+
+.burger-menu__footer-lang-item:active {
+  .burger-menu__footer-lang-button {
+    color: rgba(27, 28, 33, 0.8);
+  }
+}
+
+.burger-nav__item:hover {
+  .burger-nav__item-button {
+    color: rgba(27, 28, 33, 0.5);
+  }
+}
+
+.burger-menu__footer-lang-item:hover {
+  .burger-menu__footer-lang-button {
+    color: rgba(27, 28, 33, 0.5);
+  }
+}
+
+.burger-menu__nav-item-link:hover {
+    opacity: 0;
 }
 
 @media (min-width: 768px) {

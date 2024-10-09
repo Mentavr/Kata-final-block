@@ -104,8 +104,6 @@
   display: none;
 }
 
-
-
 .service__feedback-description-button-icon {
   transition: transform 0.4s ease-in-out;
   transform: scale(1);
@@ -115,12 +113,17 @@
   transform: scale(-1);
 }
 
-@media (min-width: 768px) {
+// .service__position-item-link:hover {
+//   outline: 0.125rem solid var(--background-active-color);
+//   border-radius: var(--border-radius-md);
+//   background-color: var(--background-white-color);
+// }
 
+@media (min-width: 768px) {
   .service__feedback-description-text-open {
     height: 100%;
   }
-  
+
   .service__feedback-description {
     flex-direction: row;
   }
@@ -139,7 +142,6 @@
 }
 
 @media (min-width: 1336px) {
-
   .service__feedback-description-text {
     width: 100%;
   }

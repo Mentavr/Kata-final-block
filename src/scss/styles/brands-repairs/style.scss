@@ -14,9 +14,7 @@
     var(--background-main-color) 0%,
     var(--background-white-color) 100%
   );
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+ @include flex-center_start;
   min-height: 80px;
 }
 
@@ -33,10 +31,8 @@
 }
 
 .brands-repairs__title-wrapper {
-  display: flex;
   width: 100%;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-center_start;
 }
 
 .brands-repairs__castom-swiper-container {
@@ -44,8 +40,6 @@
 }
 
 .brands-repairs__castom-swiper {
-  // padding-top: 16px;
-  // padding-bottom: 38px;
   background-color: var(--background-main-color);
   position: relative;
 }
@@ -55,9 +49,7 @@
 }
 
 .brands-swiper-pagination.brands-repairs__castom-swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 }
 
 .brands-swiper-pagination .swiper-pagination-bullet {
@@ -81,9 +73,7 @@
 }
 
 .brands-repairs__castom-swiper-slide-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-center_between;
   gap: 60px;
   padding: 16px;
   border: 1px solid var(--background-decorLine-color);
@@ -92,9 +82,7 @@
 }
 
 .brands-repairs__castom-swiper-slide-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   border: 2px solid var(--pink-color);
   border-radius: var(--border-radius-lg);
   background-color: var(--background-main-color);
@@ -104,9 +92,7 @@
 }
 
 .brands-repairs__castom-swiper-slide-img-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   max-width: 108px;
   max-height: 32px;
 }
@@ -152,11 +138,9 @@
   }
 
   .brands__button {
+    @include flex-center_start;
     background-color: var(--background-main-color);
     border: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     gap: 17px;
     font-weight: 500;
     font-size: 16px;
@@ -214,17 +198,14 @@
   }
 }
 
-@media (min-width: 991px) {
-  .swiper-wrapper.brands-repairs__castom-swiper-wrapper.menu_open {
-    transition: height 0.4s ease-in-out;
-    height: 265px;
-  }
-}
+// @media (min-width: 991px) {
+//   .swiper-wrapper.brands-repairs__castom-swiper-wrapper.menu_open {
+//     transition: height 0.4s ease-in-out;
+//     height: 265px;
+//   }
+// }
 
 @media (min-width: 1336px) {
-  .swiper-wrapper.brands-repairs__castom-swiper-wrapper.menu_open {
-    height: 248px;
-  }
 
   .brands-repairs__title-container {
     background: linear-gradient(
@@ -242,5 +223,11 @@
     column-gap: 32px;
     overflow: hidden;
     margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1365px) {
+  .swiper-wrapper.brands-repairs__castom-swiper-wrapper.menu_open {
+    height: 248px;
   }
 }

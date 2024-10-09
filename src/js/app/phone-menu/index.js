@@ -19,11 +19,23 @@ export const phone = () => {
       burgerBackgroundMenu.classList.remove('background-menu_open');
 
       document.body.style.overflow = 'hidden';
-      document.body.style.position = 'static';
+      document.body.style.position = 'relative';
       document.body.style.top = '';
 
     });
   })
+
+  window.addEventListener('click', function (e) {
+    if (!phoneMenu.contains(e.target) && phoneBackgroundMenu.contains(e.target)) {
+      phoneMenu.classList.remove('phone-menu__container_open');
+      phoneMenu.classList.add('phone-menu__container_close');
+
+      phoneBackgroundMenu.classList.remove('phone-menu__background-menu_open');
+      phoneBackgroundMenu.classList.add('phone-menu__background-menu_close');
+
+      document.body.style.overflow = "auto";
+    }
+  });
 
 
   phoneMenuCloseButton.addEventListener('click', () => {

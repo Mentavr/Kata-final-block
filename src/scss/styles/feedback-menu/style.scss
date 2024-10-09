@@ -20,12 +20,8 @@
 }
 
 .feedback-menu__button-close-modal {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  left: 0;
+  @include round-button;
   z-index: 200;
-  background-color: var(--pink-color);
 }
 
 .feedback-menu__title {
@@ -34,6 +30,13 @@
   line-height: 133%;
   letter-spacing: -0.03em;
   color: #1b1c21;
+}
+
+.feedback-menu__title::before {
+  @include decor-line;
+  position: absolute;
+  left: 0;
+  top: 94px;
 }
 
 .feedback-menu__form {
@@ -80,19 +83,9 @@
 }
 
 .feedback-menu__button {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 200%;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  text-align: right;
-  color: var(--background-white-color);
-  border-radius: var(--border-radius-mdl);
-  background-color: var(--pink-color);
-  padding: 4px 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include form-button;
+  @include form-button-text;
+  @include flex-center;
 }
 
 .feedback-menu__container_open {
@@ -146,6 +139,17 @@
   .feedback-menu__container_open {
     width: 440px;
     transform: translate(0px);
+  }
+
+  .feedback-menu__title::before{
+    top: 30px;
+  }
+
+  .feedback-menu__button-close-modal {
+    position: absolute;
+    position: absolute;
+    left: -70px;
+    top: 19px;
   }
 }
 
