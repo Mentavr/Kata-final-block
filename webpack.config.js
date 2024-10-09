@@ -117,10 +117,9 @@ module.exports = {
     // Копируем картинки
     new CopyWebpackPlugin({
       patterns: [
-        { from: './src/img', to: './src/img' },
-        { from: './src/img/icons', to: './src/img/icons' },
+        { from: './src/img', to: 'img' },
+        { from: './src/img/icons', to: 'img/icons' },
       ]
     })
-
   ],
 };
