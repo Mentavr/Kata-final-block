@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'TTLakes';
-  src: url(/fonts/fonts/TTLakes-Bold.eot) format("eot"), url(/fonts/fonts/TTLakes-Bold.woff) format("woff"), url(/fonts/fonts/TTLakes-Bold.ttf) format("truetype");
+  src: url(/Kata-final-block/fonts/fonts/TTLakes-Bold.eot) format("eot"), url(/Kata-final-block/fonts/fonts/TTLakes-Bold.woff) format("woff"), url(/Kata-final-block/fonts/fonts/TTLakes-Bold.ttf) format("truetype");
   font-weight: 700; }
 
 @font-face {
   font-family: 'TTLakes';
-  src: url(/fonts/fonts/TTLakes-MediumItalic.eot) format("eot"), url(/fonts/fonts/TTLakes-Medium.woff) format("woff"), url(/fonts/fonts/TTLakes-Medium.ttf) format("truetype");
+  src: url(/Kata-final-block/fonts/fonts/TTLakes-MediumItalic.eot) format("eot"), url(/Kata-final-block/fonts/fonts/TTLakes-Medium.woff) format("woff"), url(/Kata-final-block/fonts/fonts/TTLakes-Medium.ttf) format("truetype");
   font-weight: 500; }
 
 @font-face {
   font-family: 'TTLakes';
-  src: url(/fonts/fonts/TTLakes-Regular.eot) format("eot"), url(/fonts/fonts/TTLakes-Regular.woff) format("woff"), url(/fonts/fonts/TTLakes-Regular.woff) format("truetype");
+  src: url(/Kata-final-block/fonts/fonts/TTLakes-Regular.eot) format("eot"), url(/Kata-final-block/fonts/fonts/TTLakes-Regular.woff) format("woff"), url(/Kata-final-block/fonts/fonts/TTLakes-Regular.woff) format("truetype");
   font-weight: 400; }
 
 :root {
@@ -388,12 +388,15 @@ template {
   .header {
     position: absolute;
     top: -150px;
-    width: 77%; }
+    width: 100%;
+    max-width: 1120px;
+    z-index: 100; }
   .header__container.container {
     padding: 16px 16px !important; }
   .header__buttons-wrapper_absolute {
     position: absolute;
     top: 190px;
+    right: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -408,6 +411,10 @@ template {
     font-size: 1rem; }
   .header .container {
     padding: 16px 16px !important; } }
+
+.service.container {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 .service__position-wrapper {
   display: flex;
@@ -502,8 +509,6 @@ template {
     display: flex; } }
 
 @media (min-width: 1336px) {
-  .service.container {
-    padding-top: 0; }
   .service__feedback-description-text {
     width: 100%; }
   .service__feedback-text {
@@ -808,9 +813,10 @@ template {
   display: none; }
 
 @media (min-width: 768px) {
-  .brands-repairs__castom-swiper-container {
-    width: 100%;
-    margin-top: 24px; }
+  .brands-repairs__castom-swiper-container.container {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: none; }
   /* .castom-swiper{
       height: 300px;
   } */
@@ -876,11 +882,19 @@ template {
     height: 265px; } }
 
 @media (min-width: 1336px) {
+  .swiper-wrapper.brands-repairs__castom-swiper-wrapper.menu_open {
+    height: 248px; }
   .brands-repairs__title-container {
     background: linear-gradient(90deg, var(--background-main-color) 0%, var(--background-white-color) 100%);
     min-height: 56px; }
-  .brands-repairs__castom-swiper-container.container {
-    padding-top: 0; } }
+  .brands-repairs__castom-swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    overflow: hidden;
+    margin-bottom: 24px; } }
 
 .footer__text {
   font-weight: 500;
@@ -1026,8 +1040,6 @@ template {
     display: flex;
     flex-wrap: wrap;
     row-gap: 24px;
-    -moz-column-gap: 9px;
-         column-gap: 9px;
     overflow: hidden;
     margin-bottom: 24px; }
   .swiper-wrapper.types-repairs__castom-swiper-wrapper.menu_open {
@@ -1050,6 +1062,13 @@ template {
     height: 345px; } }
 
 @media (min-width: 1336px) {
+  .swiper-wrapper.types-repairs__castom-swiper-wrapper.menu_open {
+    transition: height 0.4s ease-in-out;
+    height: 511px; }
+  .types-repairs__castom-swiper-wrapper {
+    row-gap: 16px;
+    -moz-column-gap: 9px;
+         column-gap: 9px; }
   .types-repairs__container.container {
     padding-top: 0; }
   .types-repairs__title-container {
@@ -1057,6 +1076,11 @@ template {
     min-height: 56px; }
   .types-repairs__swiper-slide {
     max-width: 240px; } }
+
+@media (min-width: 1423px) {
+  .swiper-wrapper.types-repairs__castom-swiper-wrapper.menu_open {
+    transition: height 0.4s ease-in-out;
+    height: 335px; } }
 
 .phone-menu {
   position: fixed;
@@ -1233,7 +1257,7 @@ template {
 
 .feedback-menu__container {
   position: fixed;
-  transform: translateX(120%);
+  transform: translateX(150%);
   padding: 1.5rem;
   box-sizing: border-box;
   display: flex;
@@ -1730,7 +1754,8 @@ button {
   .main__title::before {
     left: -2.125rem; }
   .body__content {
-    display: flex;
+    display: flex; }
+  .body__content-wrapper {
     position: relative; } }
 
 .burger-menu__footer-lang-item_active .burger-menu__footer-lang-button {
