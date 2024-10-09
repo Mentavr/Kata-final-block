@@ -56,6 +56,20 @@ module.exports = {
               outputPath: 'fonts', // куда складывать файлы шрифтов
             },
           },
+          {
+            loader: 'file-loader',
+            options: {
+              name: './img/[name].[ext]', // убедитесь, что путь к файлам правильный
+              outputPath: 'img', // папка, куда файлы будут копироваться
+            },
+          },
+          {
+            loader: 'file-loader',
+            options: {
+              name: './img/icons/[name].[ext]', // убедитесь, что путь к файлам правильный
+              outputPath: 'img/icons', // папка, куда файлы будут копироваться
+            },
+          },
         ],
       },
 
@@ -93,7 +107,6 @@ module.exports = {
       patterns: [
         { from: './src/img', to: 'img' },
         { from: './src/img/icons', to: 'img/icons' },
-        { from: './src/404.html', to: '404.html' }
       ]
     })
 
