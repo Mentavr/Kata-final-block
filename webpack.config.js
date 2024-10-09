@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: './js/bundle.js',
-    publicPath: '/Kata-final-block/'
+    publicPath: '/'
   },
 
   // Source maps для удобства отладки
