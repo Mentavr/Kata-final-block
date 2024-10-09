@@ -355,13 +355,13 @@ template {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    justify-content: end; }
+    justify-content: flex-end; }
   .header__buttons-wrapper_left {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    justify-content: start; }
+    justify-content: flex-start; }
   .header__button {
     width: 2.5rem;
     height: 2.5rem;
