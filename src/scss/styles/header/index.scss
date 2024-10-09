@@ -67,7 +67,9 @@
     & {
       position: absolute;
       top: -150px;
-      width: 77%;
+      width: 100%;
+      max-width: 1120px;
+      z-index: 100;
     }
 
     &__container.container {
@@ -77,6 +79,7 @@
     &__buttons-wrapper_absolute {
       position: absolute;
       top: 190px;
+      right: 3%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -98,5 +101,4 @@
   .header .container {
     padding: 16px 16px !important;
   }
-
 }

@@ -8,7 +8,7 @@
 
 .feedback-menu__container {
   position: fixed;
-  transform: translateX(120%);
+  transform: translateX(150%);
   padding: 1.5rem;
   box-sizing: border-box;
   display: flex;
@@ -140,7 +140,6 @@
   .background-menu_open {
     max-width: inherit;
   }
-
 }
 
 @media (min-width: 1366px) {

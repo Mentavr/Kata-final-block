@@ -4,7 +4,7 @@
 @import './styles/header/index.scss';
 @import './styles/service/index.scss';
 @import './styles/burger-menu/index.scss';
-@import './styles/brands-swiper/index.scss';
+@import './styles/brands-repairs/index.scss';
 @import './styles/footer/index.scss';
 @import './styles/types-swiper/index.scss';
 @import './styles/phone-menu/index.scss';
@@ -119,6 +119,9 @@ button {
 
   .body__content {
     display: flex;
+  }
+
+  .body__content-wrapper {
     position: relative;
   }
 }
