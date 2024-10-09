@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   &__buttons-wrapper_left {
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   &__button {

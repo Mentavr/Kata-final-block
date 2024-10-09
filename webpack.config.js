@@ -88,17 +88,13 @@ module.exports = {
     }),
 
     // Копируем картинки
-    new CopyWebpackPlugin([
-      {
-        from: './src/img',
-        to: 'img',
-      },
-      {
-        from: './src/img/icons',
-        to: 'svg',
-      },
-      { from: './src/404.html', to: '404.html' }
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './src/img', to: 'img' },
+        { from: './src/img/icons', to: 'svg' },
+        { from: './src/404.html', to: '404.html' }
+      ]
+    })
 
   ],
 };
